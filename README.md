@@ -23,7 +23,24 @@ You can crate as many '*.resp' files as you want.
 New files can be added during server work, no need to restart.
 You can even change the contents in '*.resp' file - server always reads the file at request time.
 
-Error 404 reported if '*.resp' file not exists.
+Error 404 reported if '*.resp' file not exists.  
+
+## Usage 
+
+To see usage notes use `-help` flag. 
+Compile the app with `go install` or just run with `go run main.go`
+
+By default server starts at `localhost:3000` and API available at `http://localhost:3000/api/v1`.
+Root '/' path always redirects to apiRoot.
+At api root `http://localhost:3000/api/v1` you can see clickable link list of available API paths.
+
+Example:                    
+
+    Available paths to GET:
+        /api/v1/events/history
+        /api/v1/events/recent
+
+
 
 ## Dev env
 
