@@ -3,27 +3,27 @@
 ![Alt text](assets/fake-take-avatar.png?raw=true "Fake Take Logo")
 Simple HTTP API read only server to test Single Page Application
 
-Immitate HTTP API for testing Single Page Application, e.g. VueJs app. 
-Typycally a reply is a 'appliaction/json' format but you can use anything you want by passing the '-contentType' param.   
+Simulates HTTP API for testing Single Page Application, e.g. VueJs app. 
+Typically a reply is a 'application/json' format but you can use anything you want by passing the '-contentType' param.  Allows only "GET" requests. 
 
 ## Setup
 
 API root path by default '/api/v1.0/'  to set another root path use '-apiroot' param and set any prefix you want.
 
-### Adding paths and respose bodies
+### Adding paths and response bodies
 
-Create a file with *.resp extension. Name it folow the rule below.
+Create a file with a *.resp extension. Name it follow the rule below.
 Any part of the name separated by one underscore '_' treated as url part before the slash '/'.
 Example:
 events_recent.resp will be transalted to /api/v1.0/events/recent    
 
 _No query params supported!_
 
-You can crate as many files as you want.
+You can crate as many '*.resp' files as you want.
 New files can be added during server work, no need to restart.
-You can even change the contents of '*.resp' file - server always read the file at request time.
+You can even change the contents in '*.resp' file - server always reads the file at request time.
 
-Error 404 reported If '*.resp' file not exists.
+Error 404 reported if '*.resp' file not exists.
 
 ## Dev env
 
