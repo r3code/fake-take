@@ -30,7 +30,7 @@ Error 404 reported if '*.resp' file not exists.
 To see usage notes use `-help` flag.
 
 You can set:
-* -addr string - to which IP bind the server (default `localhost`), to bind all interfaces place 0.0.0.0
+* -addr string - to which IP bind the server (default `localhost`), to bind all interfaces place empty value `""`
 * -apiroot string - relative to the server root path (default `/api/v1`)
 * -contentType string - content type for response (default "application/json")
 * -ext string - extension for data files (default "resp")
