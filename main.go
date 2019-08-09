@@ -27,7 +27,7 @@ func main() {
 	var port int
 	var help bool
 	flag.BoolVar(&help, "help", false, "show this usage info")
-	flag.StringVar(&addr, "addr", "127.0.0.1", "server IP addres to listen at")
+	flag.StringVar(&addr, "addr", "localhost", "server IP addres to listen at")
 	flag.IntVar(&port, "port", 3000, "server port to listen at")
 	flag.StringVar(&apiRoot, "apiroot", apiRootDefault, "API base URL, default "+apiRootDefault)
 	flag.StringVar(&contentType, "contentType", "application/json", "content type for responses")
