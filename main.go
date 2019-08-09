@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"log"
+ 	"net"
 	"net/http"
 	"net/url"
 	"os"
@@ -46,7 +47,7 @@ func main() {
 	}
 
 	router := setupRouter(apiRoot, contentType, ext)
-	address := addr + ":" + strconv.Itoa(port)
+	address := net.JoinHostPort(addr, strconv.Itoa(port))
 
 	fmt.Printf("Listening and serving HTTP on %s\n", address)
 	http.ListenAndServe(address, router)

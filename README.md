@@ -27,7 +27,15 @@ Error 404 reported if '*.resp' file not exists.
 
 ## Usage 
 
-To see usage notes use `-help` flag. 
+To see usage notes use `-help` flag.
+
+You can set:
+* -addr string - to which IP bind the server (default `localhost`), to bind all interfaces place 0.0.0.0
+* -apiroot string - relative to the server root path (default `/api/v1`)
+* -contentType string - content type for response (default "application/json")
+* -ext string - extension for data files (default "resp")
+* -port int  - server port to listen at (default 3000)
+ 
 Compile the app with `go install` or just run with `go run main.go`
 
 By default server starts at `localhost:3000` and API available at `http://localhost:3000/api/v1`.
